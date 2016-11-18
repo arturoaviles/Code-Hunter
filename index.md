@@ -2,10 +2,18 @@
 layout: default
 ---
 
-[Code Hunter](http://arturoaviles.github.io/Code-Hunter/) is a Jekyll theme that supports **single-page websites** only, but supports them well. Yes, it's responsive.
+tl;dr [Code Hunter](http://arturoaviles.github.io/Code-Hunter/) is a OS Walker in Go which looks up for code files (.js, .py, .c, etc.) inside your directories and makes an analysis about them.
+
+
+
+to is a Jekyll theme that supports **single-page websites** only, but supports them well. Yes, it's responsive.
 
 <iframe src="https://ghbtns.com/github-btn.html?user=arturoaviles&amp;repo=code-hunter&amp;type=watch&amp;count=true&amp;size=large"
   allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe><br/>
+
+## Why?
+
+Because I used to code a lot projects in university and **never created repositories to show them in my github account.**
 
 Looking for a more standard Jekyll theme? Try out [Shiori](http://github.com/ellekasai/shiori) theme, which has Bootstrap integration.
 
