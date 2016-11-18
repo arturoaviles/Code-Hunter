@@ -4,7 +4,7 @@ layout: default
 
 tl;dr
 
-[Code Hunter](http://arturoaviles.github.io/Code-Hunter/) is a OS Walker in Go which looks up for code files (.js, .py, .c, etc.) inside your directories and makes an analysis about them.
+[Code Hunter](http://arturoaviles.github.io/Code-Hunter/) is a OS Walker in Go which looks up for code files (.js, .py, .c, etc.) inside your directories and makes an analysis of them.
 
 <iframe src="https://ghbtns.com/github-btn.html?user=arturoaviles&amp;repo=code-hunter&amp;type=watch&amp;count=true&amp;size=large"
   allowtransparency="true" frameborder="0" scrolling="0" width="170" height="30"></iframe><br/>
