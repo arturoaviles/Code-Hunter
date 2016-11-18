@@ -56,9 +56,9 @@ Instead of downloading, you can [fork Solo](https://github.com/chibicode/solo/fo
 
 ## Author
 
-Shu Uesugi ([Twitter](http://twitter.com/chibicode)/[GitHub](http://github.com/chibicode)/[G+](https://plus.google.com/110325199858284431541?rel=author)).
+Arturo Aviles ([Twitter](http://twitter.com/arturoaviles)/[GitHub](http://github.com/arturoaviles)/[Medium](https://medium.com/@arturoaviles)).
 
-![Shu Uesugi](https://www.gravatar.com/avatar/b868d84bbe2ed30ec45c9253e1c1cefe.jpg?s=200)
+![Arturo Aviles](https://www.gravatar.com/avatar/391fff96c298e1f641049829837684ec.jpg?s=200)
 
 ### License
 
