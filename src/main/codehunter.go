@@ -1,1 +1,0 @@
-// Author: Arturo Aviles Castellanos
