@@ -16,6 +16,9 @@ import (
 var numberOfFiles int = 0
 var numberOfDirectories int = 0
 
+var fileTypeMap = make(map[string]int)
+
+
 func main(){
     fmt.Println("Hello World!")
 
@@ -31,6 +34,8 @@ func main(){
 
     fmt.Println("\nNumber of files:", numberOfFiles)
     fmt.Println("Number of directories:", numberOfDirectories)
+
+    fmt.Println(fileTypeMap)
 }
 
 func visit(path string, f os.FileInfo, err error) error {
@@ -44,11 +49,23 @@ func getFileExtension(path string) error {
 
     if len(splitExtensionFromPath) > 1 { // File
         fmt.Println(splitExtensionFromPath[1])
-        //var extension string = splitExtensionFromPath[1]
+        var extension string = splitExtensionFromPath[1]
+        addOrUpdateMap(extension)
         numberOfFiles += 1
     } else { // Directory
         fmt.Println("Directory: %s", path)
         numberOfDirectories += 1
+    }
+
+    return nil
+}
+
+func addOrUpdateMap(extension string) error {
+    // Search key in map
+    if val, ok := fileTypeMap[extension]; ok { // If found, increase plus 1
+        fileTypeMap[extension] = val + 1
+    } else { // Add to Map
+        fileTypeMap[extension] = 1
     }
 
     return nil
