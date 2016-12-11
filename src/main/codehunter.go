@@ -12,6 +12,10 @@ import (
     //"io/ioutil"
 )
 
+// Global Variables
+var numberOfFiles int = 0
+var numberOfDirectories int = 0
+
 func main(){
     fmt.Println("Hello World!")
 
@@ -24,6 +28,9 @@ func main(){
     flag.Parse()
     err := filepath.Walk(testDirectory, visit)
     fmt.Printf("filepath.Walk() returned %v\n", err)
+
+    fmt.Println("\nNumber of files:", numberOfFiles)
+    fmt.Println("Number of directories:", numberOfDirectories)
 }
 
 func visit(path string, f os.FileInfo, err error) error {
@@ -34,12 +41,14 @@ func visit(path string, f os.FileInfo, err error) error {
 
 func getFileExtension(path string) error {
     var splitExtensionFromPath = strings.SplitAfterN(path, ".", 2)
-    //var extension string = splitExtensionFromPath[1]
-    //var extension string = "hello"
+
     if len(splitExtensionFromPath) > 1 { // File
         fmt.Println(splitExtensionFromPath[1])
+        //var extension string = splitExtensionFromPath[1]
+        numberOfFiles += 1
     } else { // Directory
         fmt.Println("Directory: %s", path)
+        numberOfDirectories += 1
     }
 
     return nil
