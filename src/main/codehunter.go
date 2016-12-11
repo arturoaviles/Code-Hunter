@@ -5,17 +5,29 @@ package main
 
 import (
     "fmt"
-    //"path/filepath"
+    "os"
+    "flag"
+    "path/filepath"
 
-    "io/ioutil"
+    //"io/ioutil"
 )
 
 func main(){
     fmt.Println("Hello World!")
 
-    files, _ := ioutil.ReadDir("./")
-    for _, f := range files {
-            fmt.Println(f.Name())
-    }
+    // Go to Users Home Directory
+    //var homeDiretory string = os.Getenv("HOMEPATH") //Remember to uncomment os
+    var testDirectory string = "C:\\Users\\100636976\\Desktop\\test"
+    fmt.Println(testDirectory)
 
+    flag.Parse()
+    err := filepath.Walk(testDirectory, visit)
+    fmt.Printf("filepath.Walk() returned %v\n", err)
+
+
+}
+
+func visit(path string, f os.FileInfo, err error) error {
+    fmt.Printf( "%s\n", path)
+    return nil
 }
