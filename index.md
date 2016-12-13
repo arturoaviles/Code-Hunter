@@ -11,7 +11,7 @@ tl;dr
 
 ## Why?
 
-Because I used to code a lot projects in university and **never created repositories to show them in my github account.**
+Because I used to code a lot projects at university and **never created repositories to show them in my github account.**
 
 
 ## Author
