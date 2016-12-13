@@ -7,6 +7,7 @@
 
         <!-- Local Stylesheets -->
         <link rel="stylesheet" href="css/normalize.css" media="screen" title="no title">
+        <link rel="stylesheet" href="css/style.css" media="screen" title="no title">
 
         <!-- Javascript -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -26,7 +27,19 @@
     </head>
     <body>
         <center>
-            <canvas id="myChart" width="400" height="400"></canvas>
+        <div class="container-fluid">
+            <div id="menu" class="row">
+                <!--
+                <button id="doughnut" type="button" class="btn btn-primary">Doughnut</button>
+                <button id="pie" type="button" class="btn btn-success">Pie</button>
+                <button id="bar" type="button" class="btn btn-info">Bar</button>
+            -->
+            </div>
+            <div class="row">
+                    <h2>Programming Languages Project</h2>
+                    <canvas id="myChart" width="400" height="400"></canvas>
+            </div>
+        </div>
         </center>
     </body>
 </html>

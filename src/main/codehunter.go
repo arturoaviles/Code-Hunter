@@ -27,9 +27,13 @@ func main(){
     fmt.Println("Hello World!")
 
     // Go to Users Home Directory
-    //var homeDiretory string = os.Getenv("HOMEPATH") //Remember to uncomment os
+    //var homeDirectory string = os.Getenv("HOMEPATH") //Remember to uncomment os
+    //fmt.Println(homeDirectory)
+
     var testDirectory string = "C:\\Users\\100636976\\Desktop\\test"
     fmt.Println(testDirectory)
+    //var testDirectory string = "C:\\Users\\100636976\\Desktop\\test"
+
 
 
     flag.Parse()

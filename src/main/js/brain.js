@@ -32,6 +32,33 @@ window.onload = function() {
         type: 'doughnut',
         data: chartData,
     });
+
+    $("#doughnut").click(function(){
+        var ctx = document.getElementById("myChart");
+        var myDoughnutChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: chartData,
+        });
+    })
+
+    $("#pie").click(function(){
+        var ctx = document.getElementById("myChart");
+        var myDoughnutChart = new Chart(ctx, {
+            type: 'pie',
+            data: chartData,
+        });
+    })
+
+    $("#bar").click(function(){
+        var ctx = document.getElementById("myChart");
+        var myDoughnutChart = new Chart(ctx, {
+            type: 'bar',
+            data: chartData,
+        });
+    })
+
+
+
 }
 
 function getRandomColor() {
@@ -41,4 +68,8 @@ function getRandomColor() {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
+}
+
+function getPie(chartData){
+
 }
