@@ -52,8 +52,13 @@ func main(){
     // Map to Json
     jsonParse, _ := json.Marshal(fileTypeMapPercentage)
 
+    var variableMake string = "var dictionary =" + string(jsonParse) + ";"
+    fmt.Println(variableMake)
+
+    var jsDictionary []byte = []byte(variableMake)
+
     // Json to File
-    err = ioutil.WriteFile("data.json", jsonParse, 0644)
+    err = ioutil.WriteFile("data.json", jsDictionary, 0644) // To save as plain json change jsDictionary to jsonParse
     if err != nil {
         panic(err)
     }
@@ -64,7 +69,7 @@ func main(){
 func visit(path string, f os.FileInfo, err error) error {
     //fmt.Printf("%s\n", path)
     getFileExtension(path)
-    
+
     return nil
 }
 
