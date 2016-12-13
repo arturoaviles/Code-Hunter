@@ -12,9 +12,7 @@ import (
     "encoding/json"
     "io/ioutil"
     //"reflect"
-
 )
-
 
 
 // Global Variables
@@ -66,6 +64,7 @@ func main(){
 func visit(path string, f os.FileInfo, err error) error {
     //fmt.Printf("%s\n", path)
     getFileExtension(path)
+    
     return nil
 }
 
