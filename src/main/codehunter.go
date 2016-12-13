@@ -9,9 +9,13 @@ import (
     "flag"
     "path/filepath"
     "strings"
-    //"io/ioutil"
+    "encoding/json"
+    "io/ioutil"
     //"reflect"
+
 )
+
+
 
 // Global Variables
 var numberOfFiles int = 0
@@ -46,11 +50,17 @@ func main(){
     }
 
     fmt.Println(fileTypeMapPercentage)
-    // Save it to JSON
 
+    // Map to Json
+    jsonParse, _ := json.Marshal(fileTypeMapPercentage)
 
+    // Json to File
+    err = ioutil.WriteFile("data.json", jsonParse, 0644)
+    if err != nil {
+        panic(err)
+    }
 
-
+    fmt.Println("Open index.html")
 }
 
 func visit(path string, f os.FileInfo, err error) error {
