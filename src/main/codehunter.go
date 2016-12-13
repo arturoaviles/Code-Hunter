@@ -30,14 +30,15 @@ func main(){
     //var homeDirectory string = os.Getenv("HOMEPATH") //Remember to uncomment os
     //fmt.Println(homeDirectory)
 
-    var testDirectory string = "C:\\Users\\100636976\\Desktop\\test"
-    fmt.Println(testDirectory)
     //var testDirectory string = "C:\\Users\\100636976\\Desktop\\test"
+    //fmt.Println(testDirectory)
 
+    var testDirectory2 string = "C:\\Users\\100636976\\Desktop\\test2"
+    fmt.Println(testDirectory2)
 
 
     flag.Parse()
-    err := filepath.Walk(testDirectory, visit)
+    err := filepath.Walk(testDirectory2, visit)
     fmt.Printf("filepath.Walk() returned %v\n", err)
 
     fmt.Println("\nNumber of files:", numberOfFiles)
